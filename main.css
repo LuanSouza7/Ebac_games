@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto; /*para centralizar na horizontal*/
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /*para separar os elementos*/
+    align-items: center;/*para centralizar na vertical*/
+}
+
+header {
+    padding: 10px 0 0; /*para adicionar um epaçamento interno*/
+    border-bottom: 1px solid #ccc; /*para colocar uma borda e separar os itens*/
+    margin-bottom: 36px; /*para distanciar o cabeçalho do conteudo principal*/
+    color: #fff;
+    background-color:rgb(37, 116, 136);
+}
+
+nav li {
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    float: left; /*porem deixa os icones grudados e por isso precisamos criar uma nova tag chamada 
+    .clear, que vai limpar tanto para esquerda e para direita */
+    list-style: none;
+    padding: 16px; /*espaçamento*/
+    position: relative; /*o position: relative possui essa capacidade de conter um elemento filho que tem um position
+    absolute, deixando assim cada submenu nas posições corretas*/
+}
+
+nav li a {
+    color:  #fff;
+    display: inline;
+    text-decoration: none;
+}
+
+.clear{
+    clear: both;        
+}   
+
+.destaque h2 {
+    color: rgb(37, 37, 136);
+    padding: 16px 0 0; /*para adicionar um epaçamento interno*/
+    border-bottom: 1px solid #ccc; /*para colocar uma borda e separar os itens*/
+    margin-bottom: 44px; /*para distanciar o cabeçalho do conteudo principal*/
+}
+
+.item h2 {
+    color: rgb(37, 37, 136);
+    padding: 16px 0 0; /*para adicionar um epaçamento interno*/
+    border-bottom: 1px solid #ccc; /*para colocar uma borda e separar os itens*/
+    margin-bottom: 56px; /*para distanciar o cabeçalho do conteudo principal*/
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.loja img { 
+    max-width: 100%;
+}
+
+.loja p {
+    padding: 12px;
+    display: inline;
+}
+
+.destaque { /*para adicionarmos uma margem*/
+    margin-bottom: 40px;
+    
+}
+
+.destaque .loja img {
+    margin-right: 8px;
+}
+
+.game img {
+    width: 140px;
+    height: 114px;
+}
+
+section h2 {
+    margin-bottom: 32px;
+}
+
+aside { /*a nossa barra lateral*/
+    padding-left: 40px;
+    background-color: blue;
+}
+
+aside .loja {/*para as noticias das paginas laterais*/
+    margin-bottom: 24px;
+    background-color: blue;
+}
+
+button {
+    background-color: rgb(37, 37, 136);
+    color:#fff;
+    padding: 4px;
+    font-family:unset;
+    cursor: pointer;
+}
+
+.game {
+    display: grid;
+    /*como foi colocado espaçamento de 2% entre eles o tamanho agora nao é 100% e sim 98%, portando 98/3= 32.6*/
+    grid-template-columns: repeat(4, 24.5%) ;/*sera dividido em 3 colunas podendo ser tbm feito 33.33% 33.33% 33.33%*/
+    column-gap: 1%; /*para colocar o espaçamento entre eles*/
+    row-gap: 5%;/*para modificar as linhas*/
+}
+
+/*para deixar visivel em tablets e smartphones*/
+@media screen and (max-width: 767px) {/*a media screen vai contemplar ate 767px que é o tamanho maximo 
+    de tela do celular*/
+    /*vamos modificar tbm a tag conteudo*/
+    .conteudo {
+        display: block; /*modificamos o display grid p/ block*/
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .destaque img {
+        width: 370px;
+    }
+
+/*copiamos todas as tags sobre destaque*/
+    .destaque .loja a {
+        display: block;
+        font-size: 1em;
+    }
+    
+    .destaque .loja img {
+        margin-right: 0;
+    }
+
+    /*para modificarmos as noticias*/
+    .game {
+        display: block;
+    }
+
+    .game p {
+        display: block;
+    }
+
+    .button {
+        display: block;
+    }
+
+    .game .loja {  /*como nesse caso não temos o display grid, adicionamos o margin-botton*/
+        margin-bottom: 32px;
+    }
+
+    /*para remover o padding left, a barra laterial que esta na parte de novidades*/
+    aside { /*a nossa barra lateral*/
+        padding-left: 0;
+        background-color: blue;
+    }
+
+    /*para modificar o cabeçalho*/
+    header div.container { /*alteramos esse cabeçalho para o flex box*/ /*queremos q altere apenas oq esta na div container*/
+        flex-direction: column; /*mudamos a sua direção para coluna*/
+    }
+    /*copiamos todo o css do menu*/
+    .submenu {
+        display: block; /*para deixarmos ele sempre visivel*/
+        width: 100%;/*para aumentar o seu tamanho*/
+        top: 100%;/*para colocar que o submenu comece apos a linha, colocamos o valor que aparecer quando passarmos o mouse
+        ou 100% que quando acaba o elemento, começa oq colocamos, sendo o 100% mais preciso*/
+        position: relative;
+        border: none;
+    }
+
+    .menu { /*para ocultar o menu e criar um botão para que quando for criado vai abrir e fechar o menu*/
+        display: none;
+    }
+
+    .menu > li {
+        clear: both;
+    }
+
+    .container h1 {
+        padding: 1px;
+    }
+
+    /*para editarmos os submenus*/
+    .submenu li {
+        display: block;
+        padding: 6px;
+    }
+
+    .botao-menu {
+        display: flex;
+        justify-content: center;
+        margin-top: 4px; /*margin no topo, distanciando o botao do "Abrir Menu" do Titulo*/
+    }
+
+    .botao-menu button {
+        padding: 4px; /*tamanho do botao*/ 
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width :1023px) { 
+    .container {
+        max-width: 90%;
+    }
+
+    .botao-menu {
+        display: none;
+    }
+
+    .destaque .loja a {
+        font-size: 1.5em;
+    }
+
+    .game {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    .game p {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1024px ) {
+    .botao-menu {
+        display: none;
+    }
+
+    .button {
+        display: block;
+        padding: 2px;
+        margin-top: 16px
+    }
+}

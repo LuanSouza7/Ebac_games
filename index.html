@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBAC Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>EBAC Games</h1>
+            <form>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#loja">Sobre a loja</a>
+                        </li>
+                        <li>
+                            <a href="#produto">Produtos</a>
+                        </li>
+                    </ul>
+                </nav>            
+            </form>
+        </div>
+            <div class="clear"></div>
+        </nav>
+    </header>
+    <div class="container conteudo"> <!--foi colocado o container para que tudo que esta na div não modificasse 
+        quando mudava o tamanho da tela-->
+        <main> <!--nosso conteudo principal-->
+            <section class="destaque"> <!--nossa sessão de destaque-->
+                        <img src="images/games.png" width="460" height="280"/> <!--link que colocamos uma img p/ ocupar espaço-->
+                        <article class="loja">
+                        <ul>
+                            <h2>Sobre a loja</h2>
+                        <a>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio totam reprehenderit eos ut enim excepturi ratione rerum, laudantium possimus dolor voluptate vel quos reiciendis omnis iusto adipisci alias delectus praesentium.
+                            </p>
+                        </ul>
+                        </a>
+                </article>
+            </section>
+            <section class="item">
+                <h2>Nossos Produtos</h2>
+                <div class="game"> <!--movemos a class da section para a div pq a div que sera o container das noticias-->
+                    <article class="loja">
+                        <a>
+                            <img src="images/ps5.png"/> <!--link que colocamos uma img p/ ocupar espaço-->
+                        <p> 
+                        Playstation 5
+                        </p>
+                        </a>
+                        <form>
+                            <button type="submit">Adicionar ao Carrinho</button>
+                        </form>
+                    </article>
+                    <article class="loja">
+                    <a>
+                            <img src="images/PS5_Pro.jpg"/> <!--link que colocamos uma img p/ ocupar espaço-->
+                        <p>
+                            Playstation 5 Pro
+                        </p>
+                        </a>
+                        <form>
+                            <button type="submit">Adicionar ao Carrinho</button>
+                        </form>
+                    </article>
+                    <article class="loja">
+                        <a>
+                            <img src="images/xbox.png"/> <!--link que colocamos uma img p/ ocupar espaço-->
+                        <p>
+                            Xbox Series X
+                        </p>
+                        </a>
+                        <form>
+                            <button type="submit">Adicionar ao Carrinho</button>
+                        </form>
+                    </article>
+                    <article class="loja">
+                        <a>
+                            <img src="images/nintendo.png"/> <!--link que colocamos uma img p/ ocupar espaço-->
+                        <P>
+                            Nintendo Switch
+                        </P>
+                        </a>
+                        <form>
+                            <button type="submit">Adicionar ao Carrinho</button>
+                        </form>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){ //formula que define o click do button//
+            $('.botao-menu button').click(function(){ //escolhe a div e determina que tera uma função com o click//
+                $('.menu').slideToggle(); //apos o click abre e fecha a class = menu no estilo slideToggle//
+            })
+        })
+    </script>
+</body>
+</html>
