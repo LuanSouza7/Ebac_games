@@ -8,19 +8,19 @@
 .container {
     max-width: 1024px;
     width: 100%;
-    margin: 0 auto; /*para centralizar na horizontal*/
+    margin: 0 auto; 
 }
 
 header .container {
     display: flex;
-    justify-content: space-between; /*para separar os elementos*/
-    align-items: center;/*para centralizar na vertical*/
+    justify-content: space-between; 
+    align-items: center;
 }
 
 header {
-    padding: 10px 0 0; /*para adicionar um epaçamento interno*/
-    border-bottom: 1px solid #ccc; /*para colocar uma borda e separar os itens*/
-    margin-bottom: 36px; /*para distanciar o cabeçalho do conteudo principal*/
+    padding: 10px 0 0; 
+    border-bottom: 1px solid #ccc; 
+    margin-bottom: 36px; 
     color: #fff;
     background-color:rgb(37, 116, 136);
 }
@@ -29,12 +29,10 @@ nav li {
     display: inline;
     margin-right: 16px;
     font-size: 18px;
-    float: left; /*porem deixa os icones grudados e por isso precisamos criar uma nova tag chamada 
-    .clear, que vai limpar tanto para esquerda e para direita */
+    float: left; 
     list-style: none;
-    padding: 16px; /*espaçamento*/
-    position: relative; /*o position: relative possui essa capacidade de conter um elemento filho que tem um position
-    absolute, deixando assim cada submenu nas posições corretas*/
+    padding: 16px; 
+    position: relative; 
 }
 
 nav li a {
@@ -49,16 +47,16 @@ nav li a {
 
 .destaque h2 {
     color: rgb(37, 37, 136);
-    padding: 16px 0 0; /*para adicionar um epaçamento interno*/
-    border-bottom: 1px solid #ccc; /*para colocar uma borda e separar os itens*/
-    margin-bottom: 44px; /*para distanciar o cabeçalho do conteudo principal*/
+    padding: 16px 0 0; 
+    border-bottom: 1px solid #ccc; 
+    margin-bottom: 44px; 
 }
 
 .item h2 {
     color: rgb(37, 37, 136);
-    padding: 16px 0 0; /*para adicionar um epaçamento interno*/
-    border-bottom: 1px solid #ccc; /*para colocar uma borda e separar os itens*/
-    margin-bottom: 56px; /*para distanciar o cabeçalho do conteudo principal*/
+    padding: 16px 0 0; 
+    border-bottom: 1px solid #ccc; 
+    margin-bottom: 56px; 
 }
 
 .conteudo {
@@ -75,7 +73,7 @@ nav li a {
     display: inline;
 }
 
-.destaque { /*para adicionarmos uma margem*/
+.destaque { 
     margin-bottom: 40px;
     
 }
@@ -93,12 +91,12 @@ section h2 {
     margin-bottom: 32px;
 }
 
-aside { /*a nossa barra lateral*/
+aside { 
     padding-left: 40px;
     background-color: blue;
 }
 
-aside .loja {/*para as noticias das paginas laterais*/
+aside .loja {
     margin-bottom: 24px;
     background-color: blue;
 }
@@ -113,18 +111,15 @@ button {
 
 .game {
     display: grid;
-    /*como foi colocado espaçamento de 2% entre eles o tamanho agora nao é 100% e sim 98%, portando 98/3= 32.6*/
-    grid-template-columns: repeat(4, 24.5%) ;/*sera dividido em 3 colunas podendo ser tbm feito 33.33% 33.33% 33.33%*/
-    column-gap: 1%; /*para colocar o espaçamento entre eles*/
-    row-gap: 5%;/*para modificar as linhas*/
+    
+    grid-template-columns: repeat(4, 24.5%) ;
+    column-gap: 1%; 
+    row-gap: 5%;
 }
 
-/*para deixar visivel em tablets e smartphones*/
-@media screen and (max-width: 767px) {/*a media screen vai contemplar ate 767px que é o tamanho maximo 
-    de tela do celular*/
-    /*vamos modificar tbm a tag conteudo*/
+@media screen and (max-width: 767px) {
     .conteudo {
-        display: block; /*modificamos o display grid p/ block*/
+        display: block; 
     }
 
     .container {
@@ -135,7 +130,7 @@ button {
         width: 370px;
     }
 
-/*copiamos todas as tags sobre destaque*/
+
     .destaque .loja a {
         display: block;
         font-size: 1em;
@@ -145,7 +140,7 @@ button {
         margin-right: 0;
     }
 
-    /*para modificarmos as noticias*/
+    
     .game {
         display: block;
     }
@@ -158,31 +153,30 @@ button {
         display: block;
     }
 
-    .game .loja {  /*como nesse caso não temos o display grid, adicionamos o margin-botton*/
+    .game .loja {  
         margin-bottom: 32px;
     }
 
-    /*para remover o padding left, a barra laterial que esta na parte de novidades*/
-    aside { /*a nossa barra lateral*/
+    
+    aside { 
         padding-left: 0;
         background-color: blue;
     }
 
-    /*para modificar o cabeçalho*/
-    header div.container { /*alteramos esse cabeçalho para o flex box*/ /*queremos q altere apenas oq esta na div container*/
-        flex-direction: column; /*mudamos a sua direção para coluna*/
+    
+    header div.container {  
+        flex-direction: column; 
     }
-    /*copiamos todo o css do menu*/
+    
     .submenu {
-        display: block; /*para deixarmos ele sempre visivel*/
-        width: 100%;/*para aumentar o seu tamanho*/
-        top: 100%;/*para colocar que o submenu comece apos a linha, colocamos o valor que aparecer quando passarmos o mouse
-        ou 100% que quando acaba o elemento, começa oq colocamos, sendo o 100% mais preciso*/
+        display: block; 
+        width: 100%;
+        top: 100%;
         position: relative;
         border: none;
     }
 
-    .menu { /*para ocultar o menu e criar um botão para que quando for criado vai abrir e fechar o menu*/
+    .menu { 
         display: none;
     }
 
@@ -194,7 +188,6 @@ button {
         padding: 1px;
     }
 
-    /*para editarmos os submenus*/
     .submenu li {
         display: block;
         padding: 6px;
@@ -203,11 +196,11 @@ button {
     .botao-menu {
         display: flex;
         justify-content: center;
-        margin-top: 4px; /*margin no topo, distanciando o botao do "Abrir Menu" do Titulo*/
+        margin-top: 4px; 
     }
 
     .botao-menu button {
-        padding: 4px; /*tamanho do botao*/ 
+        padding: 4px; 
     }
 }
 
